@@ -1,247 +1,424 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0ca0e55b9a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Configurar SSH</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="hero has-background-dark is-medium">
-
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <h1 class="title is-1 has-text-white ">SSH</h1>
-                        <span class="navbar-burger" id="menu-hamburguesa" data-target="navbarMenuHeroA">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                <a id="link-informacion-principal" class="button is-dark">
-                                    ¿Qué es?
-                                </a>
-                            </div>
-                            <div class="navbar-item">
-                                <a id="link-tutorial" class="button is-dark">
-                                    Paso a Paso
-                                </a>
-                            </div>
-
-                            <span class="navbar-item">
-                                <a id="link-mas-informacion" class="button is-primary is-outlined">
-                                    <span>+ información</span>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h2 class="title has-text-white ">
-                    ¿Cómo configurar la clave?
-                </h2>
-                <p class="subtitle has-text-white  ">
-                    ¡Y no morir en el intento!
-                </p>
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <h1 class="title is-1 has-text-white">SSH</h1>
+              <span
+                class="navbar-burger"
+                id="menu-hamburguesa"
+                data-target="navbarMenuHeroA"
+              >
+                <span class="has-text-white"></span>
+                <span class="has-text-white"></span>
+                <span class="has-text-white"></span>
+              </span>
             </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <a id="link-informacion-principal" class="button is-dark">
+                    ¿Qué es?
+                  </a>
+                </div>
+                <div class="navbar-item">
+                  <a id="link-tutorial" class="button is-dark"> Paso a Paso </a>
+                </div>
+
+                <span class="navbar-item">
+                  <a
+                    id="link-mas-informacion"
+                    class="button is-primary is-outlined"
+                  >
+                    <span>+ información</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h2 class="title has-text-white">¿Cómo configurar la clave?</h2>
+          <p class="subtitle has-text-white">¡Y no morir en el intento!</p>
         </div>
+      </div>
     </header>
 
-    <section id="seccion-informacion-principal" class="section is-10 is-offset-1">
-        <div class="container">
-            <div class="box">
-                <p> Esta página la armé con el objetivo de agrupar la información de lo que necesité para configurar la clave SSh varias veces. Tuve que formatear la pc 3 veces en el último mes y eso significo un desafio! La primera vez me tomó mucho tiempo y ahora al tener la experiencia e información guardada lo resuelvo enseguida. Gracias eternas a mi profe Male que con su paciencia infinita me guió durante toda una mañana!.</p>
-                    <p>En principio pensando en mis compañeras es que quise armarla y a quien le sea útil! Les sugiero recorrer la sección + informacion, donde van a encontrar links que amplían lo que pude armar en el paso a paso.</p>
+    <section
+      id="seccion-informacion-principal"
+      class="section is-10 is-offset-1"
+    >
+      <div class="container">
+        <div class="box">
+          <p>
+            Esta página la armé con el objetivo de agrupar la información de lo
+            que necesité para configurar la clave SSh varias veces. Tuve que
+            formatear la pc 3 veces en el último mes y eso significo un desafio!
+            La primera vez me tomó mucho tiempo y ahora al tener la experiencia
+            e información guardada lo resuelvo enseguida. Gracias eternas a mi
+            profe Male que con su paciencia infinita me guió durante toda una
+            mañana!.
+          </p>
+          <p>
+            En principio pensando en mis compañeras es que quise armarla y a
+            quien le sea útil! Les sugiero recorrer la sección + informacion,
+            donde van a encontrar links que amplían lo que pude armar en el paso
+            a paso.
+          </p>
 
-                    <p class="mt-6 has-text-weight-bold">Les dejo algunas de las preguntas que me fuí respondiendo.</p>
-                    
-                <h3 class="title is-3 mt-4">¿Qué es la clave SSH?</h3>
-                <p>Se trata de una clave que nos permite dar un paso en la protección de nuestros proyectos en GitHub.
-                    Usando el protocolo SSH, te puedes conectar y autenticar con servicios y servidores remotos. Con las
-                    llaves SSH puedes conectarte a GitHub sin proporcionar tu nombre de usuario y token de acceso
-                    personal en cada visita.
-                </p>
-                <h3 class="title is-3 mt-6">¿Tengo que configurarla por única vez?</h3>
-                <p>Vas a necesitar configurarla por única vez siempre que no tengas que formatear la pc. Tendrás que
-                    seguir los pasos con cada dispositivo que pongas a disposición para trabajar con código y quieras
-                    subirlo a GitHub de forma segura.</p>
-            </div>
+          <p class="mt-6 has-text-weight-bold">
+            Les dejo algunas de las preguntas que me fuí respondiendo.
+          </p>
+
+          <h3 class="title is-3 mt-4">¿Qué es la clave SSH?</h3>
+          <p>
+            Se trata de una clave que nos permite dar un paso en la protección
+            de nuestros proyectos en GitHub. Usando el protocolo SSH, te puedes
+            conectar y autenticar con servicios y servidores remotos. Con las
+            llaves SSH puedes conectarte a GitHub sin proporcionar tu nombre de
+            usuario y token de acceso personal en cada visita.
+          </p>
+          <h3 class="title is-3 mt-6">
+            ¿Tengo que configurarla por única vez?
+          </h3>
+          <p>
+            Vas a necesitar configurarla por única vez siempre que no tengas que
+            formatear la pc. Tendrás que seguir los pasos con cada dispositivo
+            que pongas a disposición para trabajar con código y quieras subirlo
+            a GitHub de forma segura.
+          </p>
         </div>
+      </div>
     </section>
 
     <section id="seccion-tutorial" class="section is-10 is-offset-1 is-hidden">
-        <div class="container">
-            <div class="box">
-                <h3 class="title is-3">Pasito a Pasito</h3>
+      <div class="container">
+        <div class="box">
+          <h3 class="title is-3">Pasito a Pasito</h3>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 1.</span> Abri la consola de
-                    GIT BASH</p>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 1.</span> Abri la
+            consola de GIT BASH
+          </p>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 2.</span> Ingresá el comando,
-                    incluye el correo electronico que tenes vinculado a GitHub:</p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">ssh-keygen -t
-                    ed25519
-                    -C "tu-email@gmail.com"</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 2.</span> Ingresá el
+            comando, incluye el correo electronico que tenes vinculado a GitHub:
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            ssh-keygen -t ed25519 -C "tu-email@gmail.com"
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 3.</span> Es esperable ver:
-                    Generating public/private ed25519 key pair.</p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">Presionar
-                    ENTER</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 3.</span> Es
+            esperable ver: Generating public/private ed25519 key pair.
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            Presionar ENTER
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 4.</span> Es esperable ver:
-                    Enter file in which to save the key (/c/Users/Naty/.ssh/id_ed25519):
-                    Created directory '/c/Users/Naty/.ssh'.</p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">Presionar
-                    ENTER</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 4.</span> Es
+            esperable ver: Enter file in which to save the key
+            (/c/Users/Naty/.ssh/id_ed25519): Created directory
+            '/c/Users/Naty/.ssh'.
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            Presionar ENTER
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 5.</span> Es esperable ver:
-                    Enter passphrase (empty for no passphrase):</p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">Presionar
-                    ENTER</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 5.</span> Es
+            esperable ver: Enter passphrase (empty for no passphrase):
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            Presionar ENTER
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 6.</span> Es esperable ver:
-                    Enter same passphrase again:</p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">Presionar
-                    ENTER</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 6.</span> Es
+            esperable ver: Enter same passphrase again:
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            Presionar ENTER
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 7.</span> Es esperable ver:
-                    <br>
-                    Your identification has been saved in /c/Users/Naty/.ssh/id_ed25519
-                    Your public key has been saved in /c/Users/Naty/.ssh/id_ed25519.pub
-                    The key fingerprint is:
-                    SHA256:1++TPAVbn61tJmCyoYVPBoiybpBU5/nyxmL3+VwPM6cPK1E tu-emailo@gmail.com
-                    The key's randomart image is:
-                    <span class="column is-2">
-                        +--[ED25519 256]--+
-                        | ..o. . |
-                        | o o . |
-                        | . o |
-                        | . o I .|
-                        | Soo o. ++|
-                        | ..*+-...+|
-                        | *o=+*=o|
-                        | ..o+.oB@*|
-                        | .*O=|
-                        +----[SHA256]-----+</span>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 7.</span> Es
+            esperable ver:
+            <br />
+            Your identification has been saved in /c/Users/Naty/.ssh/id_ed25519
+            Your public key has been saved in /c/Users/Naty/.ssh/id_ed25519.pub
+            The key fingerprint is:
+            SHA256:1++TPAVbn61tJmCyoYVPBoiybpBU5/nyxmL3+VwPM6cPK1E
+            tu-emailo@gmail.com The key's randomart image is:
+            <span class="column is-2">
+              +--[ED25519 256]--+ | ..o. . | | o o . | | . o | | . o I .| | Soo
+              o. ++| | ..*+-...+| | *o=+*=o| | ..o+.oB@*| | .*O=|
+              +----[SHA256]-----+</span
+            >
 
-                    Ingresar el siguiente comando:
-                </p>
+            Ingresar el siguiente comando:
+          </p>
 
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">eval
-                    "$(ssh-agent -s)"</div>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            eval "$(ssh-agent -s)"
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 8.</span> Es esperable ver:
-                    Agent pid 123
-                    <br>Ingresar el siguiente comando:
-                </p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">ssh-add
-                    ~/.ssh/id_ed25519</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 8.</span> Es
+            esperable ver: Agent pid 123 <br />Ingresar el siguiente comando:
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            ssh-add ~/.ssh/id_ed25519
+          </div>
 
-                <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 9.</span> Es esperable ver:
-                    Identity added: /c/Users/Naty/.ssh/id_ed25519 (tu-email@gmail.com)
-                    <br>Ingresá el siguiente comando, es el que va a copiar la clave para pegarla en GitHub:
-                </p>
-                <div class="box is-size-5 has-background-success-dark has-text-white has-text-weight-bold">clip <
-                        ~/.ssh/id_ed25519.pub</div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 9.</span> Es
+            esperable ver: Identity added: /c/Users/Naty/.ssh/id_ed25519
+            (tu-email@gmail.com) <br />Ingresá el siguiente comando, es el que
+            va a copiar la clave para pegarla en GitHub:
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-success-dark has-text-white has-text-weight-bold
+            "
+          >
+            clip < ~/.ssh/id_ed25519.pub
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 10.</span> Ir a la web
-                            de GitHub, iniciar sesión e ir a Settings</p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/1.png" class="image">
-                            </figure>
-                        </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 10.</span> Ir a la
+            web de GitHub, iniciar sesión e ir a Settings
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/1.png" class="image" />
+            </figure>
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 11.</span> En la barra
-                            lateral de configuración de usuario, da clic en Llaves SSH y GPG.</p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/2.png" class="image">
-                            </figure>
-                        </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 11.</span> En la
+            barra lateral de configuración de usuario, da clic en Llaves SSH y
+            GPG.
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/2.png" class="image" />
+            </figure>
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 12.</span> Click en New
-                            SSH key (Nueva clave SSH) o Add SSH key (Agregar clave SSH).</p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/3.png" class="image">
-                            </figure>
-                        </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 12.</span> Click en
+            New SSH key (Nueva clave SSH) o Add SSH key (Agregar clave SSH).
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/3.png" class="image" />
+            </figure>
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 13.</span> En el input
-                            Title ingresá un nombre que identifique la compu donde estas generando la clave. Ejemplo:
-                            "Notebook Lenovo del trabajo"
-                            <br>
-                            En el input Key copia la clave que trajiste desde Git
-                        </p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/4.png" class="image">
-                            </figure>
-                        </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 13.</span> En el
+            input Title ingresá un nombre que identifique la compu donde estas
+            generando la clave. Ejemplo: "Notebook Lenovo del trabajo"
+            <br />
+            En el input Key copia la clave que trajiste desde Git
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/4.png" class="image" />
+            </figure>
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 14.</span> Click en Add
-                            SSH key (Agregar tecla SSH).
-                        </p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/5.png" class="image">
-                            </figure>
-                        </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 14.</span> Click en
+            Add SSH key (Agregar tecla SSH).
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/5.png" class="image" />
+            </figure>
+          </div>
 
-                        <p class="is-size-5 mt-4"><span class="is-size-2 has-text-primary-dark"> 15.</span> Si te lo
-                            pide confirmá tu contraseña de GitHub
-                        </p>
-                        <div class="box is-size-5 has-background-link-dark has-text-white has-text-weight-bold">
-                            <figure>
-                                <img src="img/6.png" class="image">
-                            </figure>
-                        </div>
-                </div>
-            </div>
+          <p class="is-size-5 mt-4">
+            <span class="is-size-2 has-text-primary-dark"> 15.</span> Si te lo
+            pide confirmá tu contraseña de GitHub
+          </p>
+          <div
+            class="
+              box
+              is-size-5
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+          >
+            <figure>
+              <img src="img/6.png" class="image" />
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="seccion-mas-informacion" class="section is-10 is-offset-1 is-hidden">
-        <div class="container">
-            <div class="box">
-                <h3 class="title is-3">Les dejo links con más información.</h3>
-                <p class="subtitle">Para ampliar lo que sabemos y van a poder encontrar ayuda en caso de que se les presente algun problema.</p>
+    <section
+      id="seccion-mas-informacion"
+      class="section is-10 is-offset-1 is-hidden"
+    >
+      <div class="container">
+        <div class="box">
+          <h3 class="title is-3">Les dejo links con más información.</h3>
+          <p class="subtitle">
+            Para ampliar lo que sabemos y van a poder encontrar ayuda en caso de
+            que se les presente algun problema.
+          </p>
 
-                <p class="has-text-weight-bold is-size-5 mt-6">Comprobar tus clavez SSH existentes</p>
-                <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys" class="box is-size-6 has-background-link-dark has-text-white has-text-weight-bold">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys</a>
+          <p class="has-text-weight-bold is-size-5 mt-6">
+            Comprobar tus clavez SSH existentes
+          </p>
+          <a
+            href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys"
+            class="
+              box
+              is-size-6
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+            >https://docs.github.com/es/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys</a
+          >
 
-                <p class="has-text-weight-bold is-size-5 mt-6">Generar la nueva clave SSH</p>
-                <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="box is-size-6 has-background-link-dark has-text-white has-text-weight-bold">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>
+          <p class="has-text-weight-bold is-size-5 mt-6">
+            Generar la nueva clave SSH
+          </p>
+          <a
+            href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+            class="
+              box
+              is-size-6
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+            >https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a
+          >
 
-                <p class="has-text-weight-bold is-size-5 mt-6">Agregar la nueva clave en GitHub</p>
-                <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="box is-size-6 has-background-link-dark has-text-white has-text-weight-bold">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a>
-
-            </div>
+          <p class="has-text-weight-bold is-size-5 mt-6">
+            Agregar la nueva clave en GitHub
+          </p>
+          <a
+            href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+            class="
+              box
+              is-size-6
+              has-background-link-dark has-text-white has-text-weight-bold
+            "
+            >https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a
+          >
         </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Configuración de SSH</strong> Hecho con amor por <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">Naty Navarro</a>. nataliasoledadnavarro@gmail.com
-          </p>
-        </div>
-      </footer>
+      <div class="content has-text-centered">
+        <p>
+          <strong>Configuración de SSH</strong> Hecho con amor por
+          <a href="https://www.linkedin.com/in/nataliasoledadnavarro/"
+            >Naty Navarro</a
+          >. nataliasoledadnavarro@gmail.com
+        </p>
+      </div>
+    </footer>
 
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>

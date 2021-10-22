@@ -7,10 +7,13 @@ Pensando en las próximas veces que necesite hacerlo y para compartirlo con mis 
 Van a encontrar:
 
 • Info sobre de que se trata la clave SSH.
+
 • Paso a paso para su configuración.
+
 • Paso a paso sobre como agregarla en GitHub.
+
 • Links de + Información.
 
-link la web [ACÁ](https://nataliasoledadnavarro.github.io/Configuracion-clave-SSH/)
+link a la web [ACÁ](https://nataliasoledadnavarro.github.io/Configuracion-clave-SSH/)
 
 Realizado por [Naty Navarro](https://www.linkedin.com/in/nataliasoledadnavarro)
